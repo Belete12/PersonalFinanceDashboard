@@ -24,6 +24,15 @@ function Header({ title }) {
         >
           About
         </NavLink>
+
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            isActive ? styles.active : styles.inactive
+          }
+        >
+          Dashboard
+        </NavLink>
       </nav>
     </header>
   );

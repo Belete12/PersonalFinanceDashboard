@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.transactions {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.categories {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.panel {
+  padding: 0.5rem;
+}
