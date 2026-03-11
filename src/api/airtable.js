@@ -8,11 +8,15 @@ export async function fetchTransactions() {
   const res = await fetch(AIRTABLE_URL, {
     headers: { Authorization: `Bearer ${API_KEY}` },
   });
+
   const data = await res.json();
 
   return data.records.map((r) => ({
     id: r.id,
-    ...r.fields,
+    description: r.fields.description || "",
+    amount: r.fields.amount || 0,
+    category: r.fields.category || "",
+    date: r.fields.date || "",
   }));
 }
 
@@ -23,11 +27,25 @@ export async function createTransaction(tx) {
       Authorization: `Bearer ${API_KEY}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ fields: tx }),
+    body: JSON.stringify({
+      fields: {
+        description: tx.description,
+        amount: tx.amount,
+        category: tx.category,
+        date: tx.date,
+      },
+    }),
   });
 
   const data = await res.json();
-  return { id: data.id, ...data.fields };
+
+  return {
+    id: data.id,
+    description: data.fields.description,
+    amount: data.fields.amount,
+    category: data.fields.category,
+    date: data.fields.date,
+  };
 }
 
 export async function deleteTransaction(id) {
@@ -37,16 +55,30 @@ export async function deleteTransaction(id) {
   });
 }
 
-export async function updateTransaction(id, fields) {
+export async function updateTransaction(id, tx) {
   const res = await fetch(`${AIRTABLE_URL}/${id}`, {
     method: "PATCH",
     headers: {
       Authorization: `Bearer ${API_KEY}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ fields }),
+    body: JSON.stringify({
+      fields: {
+        description: tx.description,
+        amount: tx.amount,
+        category: tx.category,
+        date: tx.date,
+      },
+    }),
   });
 
   const data = await res.json();
-  return { id: data.id, ...data.fields };
+
+  return {
+    id: data.id,
+    description: data.fields.description,
+    amount: data.fields.amount,
+    category: data.fields.category,
+    date: data.fields.date,
+  };
 }
