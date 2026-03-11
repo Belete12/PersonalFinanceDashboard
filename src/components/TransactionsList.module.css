@@ -1,40 +1,76 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
 .item {
   display: grid;
-  grid-template-columns: 100px 1fr 120px 100px;
-  background: #f5f5f5;
-  padding: 0.75rem;
-  border-radius: 6px;
+  grid-template-columns: 100px 1fr 120px 100px 80px 80px;
   align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #fafafa;
+  border-radius: 6px;
 }
 
 .date {
-  font-size: 0.85rem;
+  font-size: 14px;
   color: #666;
 }
 
 .description {
-  font-size: 1rem;
+  font-weight: 500;
+}
+
+.category {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
 }
 
 .income {
   color: green;
   font-weight: bold;
-  text-align: right;
 }
 
 .expense {
   color: red;
   font-weight: bold;
-  text-align: right;
 }
 
-.category {
-  font-size: 0.9rem;
-  color: #444;
+.editBtn {
+  background: #ddeaff;
+  border: 1px solid #88aaff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #0047b3;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: #ffdddd;
+  border: 1px solid #ff8888;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #b30000;
+  cursor: pointer;
+}
+
+.saveBtn {
+  background: #d4ffd4;
+  border: 1px solid #7ed67e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #006600;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
 }

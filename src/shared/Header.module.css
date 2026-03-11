@@ -1,25 +1,37 @@
 .header {
-  position: relative;
-  padding: 1rem;
+  background: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #222;
 }
 
 .title {
-  text-align: center;
   margin: 0;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 
 .nav {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   display: flex;
-  gap: 1rem;
-}
-
-.active {
-  color: gray;
+  gap: 2rem;
 }
 
 .inactive {
-  color: black;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.inactive:hover {
+  color: #fff;
+}
+
+.active {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: 700;
 }

@@ -25,3 +25,23 @@
 .panel {
   padding: 0.5rem;
 }
+
+.categoryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.categoryBadge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.categoryAmount {
+  font-weight: bold;
+  font-size: 1rem;
+}

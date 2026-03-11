@@ -1,16 +1,43 @@
-# React + Vite
+\*\*\* Personal Finance Dashboard
+A simple, clean, and fully functional personal finance tracker built with React + Vite and backed by Airtable for persistent cloud storage.
+Users can add, edit, and delete transactions, track income and expenses, and view category‑based totals.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Features
+** Add Transactions
+Enter description, amount, category, and date.
+Data is saved instantly to Airtable.
 
-Currently, two official plugins are available:
+\*\* Edit Transactions
+Inline editing allows updating any field (description, amount, category, date).
+Changes sync with Airtable in real time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+\*\* Delete Transactions
+Remove any transaction with one click.
+The UI updates immediately and the record is deleted from Airtable.
 
-## React Compiler
+\*\* Automatic Totals
+Total Income
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Total Expenses
 
-## Expanding the ESLint configuration
+Balance
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Category totals (Food, Rent, Salary, Transport, Shopping, Other)
+
+\*\*Airtable Integration
+All data is stored in Airtable using:
+
+Personal Access Token
+
+Base ID
+
+Table Name
+
+CRUD operations (Create, Read, Update, Delete)
+
+\*\*`+Tech Stack
+React (Vite)
+
+Airtable REST API
+
+CSS Modules

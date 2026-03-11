@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import Header from "./shared/Header";
+import Layout from "./shared/Layout";
 
 import "./App.css";
 
@@ -20,7 +21,7 @@ function App() {
           : "Not Found";
 
   return (
-    <>
+    <Layout>
       <Header title={title} />
 
       <Routes>
@@ -29,7 +30,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </Layout>
   );
 }
 
